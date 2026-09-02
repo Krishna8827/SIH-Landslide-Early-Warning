@@ -1,0 +1,97 @@
+{
+  "project": "AI-Powered Landslide Risk Prediction - North Eastern Region",
+  "model": {
+    "model": "Weighted XGBoost + LightGBM ensemble",
+    "xgboost_weight": 0.3,
+    "lightgbm_weight": 0.7,
+    "roc_auc": 0.9765793981481482,
+    "pr_auc": 0.9248897866322848,
+    "threshold": 0.18,
+    "f1": 0.8721207307386815,
+    "f2": 0.8973520758417783,
+    "precision": 0.8330804248861912,
+    "recall": 0.915
+  },
+  "dataset": {
+    "rows": 4800,
+    "positive_rows": 1200,
+    "negative_rows": 3600,
+    "real_event_rows": 381,
+    "synthetic_augmented_positive_rows": 819,
+    "synthetic_pseudo_absence_rows": 3600,
+    "states_present": [
+      "Assam",
+      "Manipur",
+      "Mizoram",
+      "Sikkim",
+      "Tripura"
+    ]
+  },
+  "validation": {
+    "method": "5-fold StratifiedGroupKFold",
+    "geographic_grouping": "~0.5 degree latitude/longitude blocks",
+    "confusion_matrix": [
+      [
+        3380,
+        220
+      ],
+      [
+        102,
+        1098
+      ]
+    ],
+    "high_recall_f2_threshold": 0.08499999999999999,
+    "high_recall_f2": 0.9091634738186463,
+    "high_recall_precision": 0.7780054644808743,
+    "high_recall_recall": 0.9491666666666667
+  },
+  "features": [
+    "elevation_m",
+    "slope_deg",
+    "aspect_deg",
+    "curvature",
+    "rainfall_24h_mm",
+    "rainfall_72h_mm",
+    "rainfall_7d_mm",
+    "land_cover",
+    "ndvi",
+    "soil_type",
+    "distance_to_river_m",
+    "distance_to_road_m"
+  ],
+  "excluded_from_training": [
+    "event_id",
+    "state",
+    "latitude",
+    "longitude",
+    "monsoon_phase",
+    "severity_class",
+    "is_fatal",
+    "reliability_score",
+    "source"
+  ],
+  "risk_bands_for_dashboard": {
+    "LOW": [
+      0.0,
+      0.25
+    ],
+    "MODERATE": [
+      0.25,
+      0.5
+    ],
+    "HIGH": [
+      0.5,
+      0.75
+    ],
+    "CRITICAL": [
+      0.75,
+      1.0
+    ]
+  },
+  "important_limitations": [
+    "All negative samples in the supplied dataset are synthetic pseudo-absence samples.",
+    "Most positive samples are synthetic augmented positives; only 381 rows are marked real_event.",
+    "Reported metrics are prototype validation metrics on the supplied dataset and are not evidence of real-world landslide-warning accuracy.",
+    "The current repository consumes already-engineered environmental features; it does not itself download live IMD, satellite, or sensor feeds."
+  ]
+}

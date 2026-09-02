@@ -1,0 +1,23 @@
+feature,importance
+remainder__slope_deg,0.13130424596758528
+remainder__elevation_m,0.12811011288569218
+remainder__curvature,0.1138896040543122
+remainder__ndvi,0.11051376296662511
+remainder__distance_to_road_m,0.08188783303130416
+remainder__distance_to_river_m,0.0762375288434969
+remainder__aspect_deg,0.06385707900696092
+remainder__rainfall_7d_mm,0.05244510787684032
+remainder__rainfall_24h_mm,0.05149245715075163
+cat__land_cover_Dense Forest,0.03088273840318658
+remainder__rainfall_72h_mm,0.02532044681075564
+cat__land_cover_Barren/Degraded,0.0207231252088491
+cat__land_cover_Shrubland,0.017446873149489846
+cat__land_cover_Open Forest,0.016025910399897175
+cat__soil_type_Rocky/Skeletal,0.015705947478359995
+cat__soil_type_Silty Clay,0.015456124864726625
+cat__soil_type_Clay Loam,0.011528029121361357
+cat__soil_type_Laterite,0.008083856998472683
+cat__soil_type_Loam,0.007921760184647653
+cat__soil_type_Sandy Loam,0.007234314785176127
+cat__land_cover_Built-up,0.007004541126629298
+cat__land_cover_Cropland,0.00692859968487916
