@@ -1,0 +1,10 @@
+{
+  "source": "NASA POWER Daily API",
+  "parameter": "PRECTOTCORR",
+  "time_standard": "UTC",
+  "rows": 381,
+  "successful_complete_windows": 381,
+  "failed_or_incomplete_windows": 0,
+  "lookback_days_including_event_day": 7,
+  "output_csv": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\rainfall\\ner_events_with_dem_rainfall.csv"
+}

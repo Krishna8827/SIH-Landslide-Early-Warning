@@ -5,3 +5,20 @@ venv/
 .env
 .pytest_cache/
 .DS_Store
+data/raw/dem/**/*.tif
+data/raw/dem/**/*.tif.part
+data/raw/rainfall/nasa_power/cache/
+data/processed/rainfall/rainfall_checkpoint.csv
+data/raw/osm/overpass_cache/
+data/processed/roads_rivers/roads_rivers_checkpoint.csv
+echo data/processed/background_features/background_osm_checkpoint.csv>>.gitignore
+echo data/processed/background_features/background_non_osm_checkpoint.csv>>.gitignoredata/raw/**/cache/
+data/raw/osm/overpass_cache/
+data/raw/dem/**/*.tif
+data/raw/dem/**/*.tif.part
+data/processed/**/*checkpoint*.csv
+data/raw/soil_moisture/era5_land/cache/
+data/raw/rainfall/nasa_power/cache/
+data/raw/osm/overpass_cache/
+data/processed/background_features/background_osm_checkpoint.csv
+data/processed/background_features/background_non_osm_checkpoint.csv

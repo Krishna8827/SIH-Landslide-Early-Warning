@@ -1,0 +1,12 @@
+{
+  "positive_rows": 381,
+  "background_rows": 381,
+  "same_state_matching": true,
+  "same_date_matching": true,
+  "min_distance_from_known_event_km": 5.0,
+  "min_distance_between_background_km": 1.0,
+  "random_seed": 42,
+  "label_note": "landslide=0 is pseudo-absence/background, not confirmed stable",
+  "boundary_source": "geoBoundaries gbOpen India ADM1",
+  "output_csv": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\background\\ner_background_points_matched.csv"
+}

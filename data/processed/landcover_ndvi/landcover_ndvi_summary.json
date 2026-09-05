@@ -1,0 +1,10 @@
+{
+  "rows": 381,
+  "esa_worldcover_2021_success": 381,
+  "modis_ndvi_success": 284,
+  "modis_ndvi_good_or_marginal_quality": 127,
+  "worldcover_collection": "esa-worldcover",
+  "modis_collection": "modis-13Q1-061",
+  "output_csv": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\landcover_ndvi\\ner_events_with_dem_rainfall_landcover_ndvi.csv",
+  "important_note": "WorldCover 2021 is used as a static susceptibility proxy. Historical MODIS NDVI is matched near each event date."
+}

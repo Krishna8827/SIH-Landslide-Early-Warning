@@ -1,0 +1,1487 @@
+[
+  {
+    "id": "Copernicus_DSM_COG_10_N29_00_E097_00_DEM",
+    "bbox": [
+      96.99986111111112,
+      29.000138888888888,
+      97.99986111111112,
+      30.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N29_00_E096_00_DEM",
+    "bbox": [
+      95.99986111111112,
+      29.000138888888888,
+      96.99986111111112,
+      30.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N29_00_E095_00_DEM",
+    "bbox": [
+      94.99986111111112,
+      29.000138888888888,
+      95.99986111111112,
+      30.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N29_00_E094_00_DEM",
+    "bbox": [
+      93.99986111111112,
+      29.000138888888888,
+      94.99986111111112,
+      30.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N29_00_E093_00_DEM",
+    "bbox": [
+      92.99986111111112,
+      29.000138888888888,
+      93.99986111111112,
+      30.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N29_00_E092_00_DEM",
+    "bbox": [
+      91.99986111111112,
+      29.000138888888888,
+      92.99986111111112,
+      30.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N29_00_E091_00_DEM",
+    "bbox": [
+      90.99986111111112,
+      29.000138888888888,
+      91.99986111111112,
+      30.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N29_00_E090_00_DEM",
+    "bbox": [
+      89.99986111111112,
+      29.000138888888888,
+      90.99986111111112,
+      30.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N29_00_E089_00_DEM",
+    "bbox": [
+      88.99986111111112,
+      29.000138888888888,
+      89.99986111111112,
+      30.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N29_00_E088_00_DEM",
+    "bbox": [
+      87.99986111111112,
+      29.000138888888888,
+      88.99986111111112,
+      30.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N29_00_E087_00_DEM",
+    "bbox": [
+      86.99986111111112,
+      29.000138888888888,
+      87.99986111111112,
+      30.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N28_00_E097_00_DEM",
+    "bbox": [
+      96.99986111111112,
+      28.000138888888888,
+      97.99986111111112,
+      29.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N28_00_E096_00_DEM",
+    "bbox": [
+      95.99986111111112,
+      28.000138888888888,
+      96.99986111111112,
+      29.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N28_00_E095_00_DEM",
+    "bbox": [
+      94.99986111111112,
+      28.000138888888888,
+      95.99986111111112,
+      29.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N28_00_E094_00_DEM",
+    "bbox": [
+      93.99986111111112,
+      28.000138888888888,
+      94.99986111111112,
+      29.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N28_00_E093_00_DEM",
+    "bbox": [
+      92.99986111111112,
+      28.000138888888888,
+      93.99986111111112,
+      29.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N28_00_E092_00_DEM",
+    "bbox": [
+      91.99986111111112,
+      28.000138888888888,
+      92.99986111111112,
+      29.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N28_00_E091_00_DEM",
+    "bbox": [
+      90.99986111111112,
+      28.000138888888888,
+      91.99986111111112,
+      29.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N28_00_E090_00_DEM",
+    "bbox": [
+      89.99986111111112,
+      28.000138888888888,
+      90.99986111111112,
+      29.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N28_00_E089_00_DEM",
+    "bbox": [
+      88.99986111111112,
+      28.000138888888888,
+      89.99986111111112,
+      29.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N28_00_E088_00_DEM",
+    "bbox": [
+      87.99986111111112,
+      28.000138888888888,
+      88.99986111111112,
+      29.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N28_00_E087_00_DEM",
+    "bbox": [
+      86.99986111111112,
+      28.000138888888888,
+      87.99986111111112,
+      29.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N27_00_E097_00_DEM",
+    "bbox": [
+      96.99986111111112,
+      27.000138888888888,
+      97.99986111111112,
+      28.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N27_00_E096_00_DEM",
+    "bbox": [
+      95.99986111111112,
+      27.000138888888888,
+      96.99986111111112,
+      28.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N27_00_E095_00_DEM",
+    "bbox": [
+      94.99986111111112,
+      27.000138888888888,
+      95.99986111111112,
+      28.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N27_00_E094_00_DEM",
+    "bbox": [
+      93.99986111111112,
+      27.000138888888888,
+      94.99986111111112,
+      28.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N27_00_E093_00_DEM",
+    "bbox": [
+      92.99986111111112,
+      27.000138888888888,
+      93.99986111111112,
+      28.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N27_00_E092_00_DEM",
+    "bbox": [
+      91.99986111111112,
+      27.000138888888888,
+      92.99986111111112,
+      28.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N27_00_E091_00_DEM",
+    "bbox": [
+      90.99986111111112,
+      27.000138888888888,
+      91.99986111111112,
+      28.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N27_00_E090_00_DEM",
+    "bbox": [
+      89.99986111111112,
+      27.000138888888888,
+      90.99986111111112,
+      28.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N27_00_E089_00_DEM",
+    "bbox": [
+      88.99986111111112,
+      27.000138888888888,
+      89.99986111111112,
+      28.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N27_00_E088_00_DEM",
+    "bbox": [
+      87.99986111111112,
+      27.000138888888888,
+      88.99986111111112,
+      28.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N27_00_E087_00_DEM",
+    "bbox": [
+      86.99986111111112,
+      27.000138888888888,
+      87.99986111111112,
+      28.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N26_00_E097_00_DEM",
+    "bbox": [
+      96.99986111111112,
+      26.000138888888888,
+      97.99986111111112,
+      27.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N26_00_E096_00_DEM",
+    "bbox": [
+      95.99986111111112,
+      26.000138888888888,
+      96.99986111111112,
+      27.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N26_00_E095_00_DEM",
+    "bbox": [
+      94.99986111111112,
+      26.000138888888888,
+      95.99986111111112,
+      27.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N26_00_E094_00_DEM",
+    "bbox": [
+      93.99986111111112,
+      26.000138888888888,
+      94.99986111111112,
+      27.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N26_00_E093_00_DEM",
+    "bbox": [
+      92.99986111111112,
+      26.000138888888888,
+      93.99986111111112,
+      27.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N26_00_E092_00_DEM",
+    "bbox": [
+      91.99986111111112,
+      26.000138888888888,
+      92.99986111111112,
+      27.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N26_00_E091_00_DEM",
+    "bbox": [
+      90.99986111111112,
+      26.000138888888888,
+      91.99986111111112,
+      27.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N26_00_E090_00_DEM",
+    "bbox": [
+      89.99986111111112,
+      26.000138888888888,
+      90.99986111111112,
+      27.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N26_00_E089_00_DEM",
+    "bbox": [
+      88.99986111111112,
+      26.000138888888888,
+      89.99986111111112,
+      27.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N26_00_E088_00_DEM",
+    "bbox": [
+      87.99986111111112,
+      26.000138888888888,
+      88.99986111111112,
+      27.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N26_00_E087_00_DEM",
+    "bbox": [
+      86.99986111111112,
+      26.000138888888888,
+      87.99986111111112,
+      27.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N25_00_E097_00_DEM",
+    "bbox": [
+      96.99986111111112,
+      25.000138888888888,
+      97.99986111111112,
+      26.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N25_00_E096_00_DEM",
+    "bbox": [
+      95.99986111111112,
+      25.000138888888888,
+      96.99986111111112,
+      26.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N25_00_E095_00_DEM",
+    "bbox": [
+      94.99986111111112,
+      25.000138888888888,
+      95.99986111111112,
+      26.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N25_00_E094_00_DEM",
+    "bbox": [
+      93.99986111111112,
+      25.000138888888888,
+      94.99986111111112,
+      26.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N25_00_E093_00_DEM",
+    "bbox": [
+      92.99986111111112,
+      25.000138888888888,
+      93.99986111111112,
+      26.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N25_00_E092_00_DEM",
+    "bbox": [
+      91.99986111111112,
+      25.000138888888888,
+      92.99986111111112,
+      26.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N25_00_E091_00_DEM",
+    "bbox": [
+      90.99986111111112,
+      25.000138888888888,
+      91.99986111111112,
+      26.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N25_00_E090_00_DEM",
+    "bbox": [
+      89.99986111111112,
+      25.000138888888888,
+      90.99986111111112,
+      26.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N25_00_E089_00_DEM",
+    "bbox": [
+      88.99986111111112,
+      25.000138888888888,
+      89.99986111111112,
+      26.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N25_00_E088_00_DEM",
+    "bbox": [
+      87.99986111111112,
+      25.000138888888888,
+      88.99986111111112,
+      26.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N25_00_E087_00_DEM",
+    "bbox": [
+      86.99986111111112,
+      25.000138888888888,
+      87.99986111111112,
+      26.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N24_00_E097_00_DEM",
+    "bbox": [
+      96.99986111111112,
+      24.000138888888888,
+      97.99986111111112,
+      25.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N24_00_E096_00_DEM",
+    "bbox": [
+      95.99986111111112,
+      24.000138888888888,
+      96.99986111111112,
+      25.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N24_00_E095_00_DEM",
+    "bbox": [
+      94.99986111111112,
+      24.000138888888888,
+      95.99986111111112,
+      25.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N24_00_E094_00_DEM",
+    "bbox": [
+      93.99986111111112,
+      24.000138888888888,
+      94.99986111111112,
+      25.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N24_00_E093_00_DEM",
+    "bbox": [
+      92.99986111111112,
+      24.000138888888888,
+      93.99986111111112,
+      25.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N24_00_E092_00_DEM",
+    "bbox": [
+      91.99986111111112,
+      24.000138888888888,
+      92.99986111111112,
+      25.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N24_00_E091_00_DEM",
+    "bbox": [
+      90.99986111111112,
+      24.000138888888888,
+      91.99986111111112,
+      25.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N24_00_E090_00_DEM",
+    "bbox": [
+      89.99986111111112,
+      24.000138888888888,
+      90.99986111111112,
+      25.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N24_00_E089_00_DEM",
+    "bbox": [
+      88.99986111111112,
+      24.000138888888888,
+      89.99986111111112,
+      25.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N24_00_E088_00_DEM",
+    "bbox": [
+      87.99986111111112,
+      24.000138888888888,
+      88.99986111111112,
+      25.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N24_00_E087_00_DEM",
+    "bbox": [
+      86.99986111111112,
+      24.000138888888888,
+      87.99986111111112,
+      25.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N23_00_E097_00_DEM",
+    "bbox": [
+      96.99986111111112,
+      23.000138888888888,
+      97.99986111111112,
+      24.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N23_00_E096_00_DEM",
+    "bbox": [
+      95.99986111111112,
+      23.000138888888888,
+      96.99986111111112,
+      24.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N23_00_E095_00_DEM",
+    "bbox": [
+      94.99986111111112,
+      23.000138888888888,
+      95.99986111111112,
+      24.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N23_00_E094_00_DEM",
+    "bbox": [
+      93.99986111111112,
+      23.000138888888888,
+      94.99986111111112,
+      24.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N23_00_E093_00_DEM",
+    "bbox": [
+      92.99986111111112,
+      23.000138888888888,
+      93.99986111111112,
+      24.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N23_00_E092_00_DEM",
+    "bbox": [
+      91.99986111111112,
+      23.000138888888888,
+      92.99986111111112,
+      24.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N23_00_E091_00_DEM",
+    "bbox": [
+      90.99986111111112,
+      23.000138888888888,
+      91.99986111111112,
+      24.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N23_00_E090_00_DEM",
+    "bbox": [
+      89.99986111111112,
+      23.000138888888888,
+      90.99986111111112,
+      24.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N23_00_E089_00_DEM",
+    "bbox": [
+      88.99986111111112,
+      23.000138888888888,
+      89.99986111111112,
+      24.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N23_00_E088_00_DEM",
+    "bbox": [
+      87.99986111111112,
+      23.000138888888888,
+      88.99986111111112,
+      24.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N23_00_E087_00_DEM",
+    "bbox": [
+      86.99986111111112,
+      23.000138888888888,
+      87.99986111111112,
+      24.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N22_00_E097_00_DEM",
+    "bbox": [
+      96.99986111111112,
+      22.000138888888888,
+      97.99986111111112,
+      23.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N22_00_E096_00_DEM",
+    "bbox": [
+      95.99986111111112,
+      22.000138888888888,
+      96.99986111111112,
+      23.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N22_00_E095_00_DEM",
+    "bbox": [
+      94.99986111111112,
+      22.000138888888888,
+      95.99986111111112,
+      23.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N22_00_E094_00_DEM",
+    "bbox": [
+      93.99986111111112,
+      22.000138888888888,
+      94.99986111111112,
+      23.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N22_00_E093_00_DEM",
+    "bbox": [
+      92.99986111111112,
+      22.000138888888888,
+      93.99986111111112,
+      23.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N22_00_E092_00_DEM",
+    "bbox": [
+      91.99986111111112,
+      22.000138888888888,
+      92.99986111111112,
+      23.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N22_00_E091_00_DEM",
+    "bbox": [
+      90.99986111111112,
+      22.000138888888888,
+      91.99986111111112,
+      23.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N22_00_E090_00_DEM",
+    "bbox": [
+      89.99986111111112,
+      22.000138888888888,
+      90.99986111111112,
+      23.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N22_00_E089_00_DEM",
+    "bbox": [
+      88.99986111111112,
+      22.000138888888888,
+      89.99986111111112,
+      23.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N22_00_E088_00_DEM",
+    "bbox": [
+      87.99986111111112,
+      22.000138888888888,
+      88.99986111111112,
+      23.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N22_00_E087_00_DEM",
+    "bbox": [
+      86.99986111111112,
+      22.000138888888888,
+      87.99986111111112,
+      23.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N21_00_E097_00_DEM",
+    "bbox": [
+      96.99986111111112,
+      21.000138888888888,
+      97.99986111111112,
+      22.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N21_00_E096_00_DEM",
+    "bbox": [
+      95.99986111111112,
+      21.000138888888888,
+      96.99986111111112,
+      22.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N21_00_E095_00_DEM",
+    "bbox": [
+      94.99986111111112,
+      21.000138888888888,
+      95.99986111111112,
+      22.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N21_00_E094_00_DEM",
+    "bbox": [
+      93.99986111111112,
+      21.000138888888888,
+      94.99986111111112,
+      22.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N21_00_E093_00_DEM",
+    "bbox": [
+      92.99986111111112,
+      21.000138888888888,
+      93.99986111111112,
+      22.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N21_00_E092_00_DEM",
+    "bbox": [
+      91.99986111111112,
+      21.000138888888888,
+      92.99986111111112,
+      22.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N21_00_E091_00_DEM",
+    "bbox": [
+      90.99986111111112,
+      21.000138888888888,
+      91.99986111111112,
+      22.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N21_00_E090_00_DEM",
+    "bbox": [
+      89.99986111111112,
+      21.000138888888888,
+      90.99986111111112,
+      22.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N21_00_E089_00_DEM",
+    "bbox": [
+      88.99986111111112,
+      21.000138888888888,
+      89.99986111111112,
+      22.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N21_00_E088_00_DEM",
+    "bbox": [
+      87.99986111111112,
+      21.000138888888888,
+      88.99986111111112,
+      22.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "Copernicus_DSM_COG_10_N21_00_E087_00_DEM",
+    "bbox": [
+      86.99986111111112,
+      21.000138888888888,
+      87.99986111111112,
+      22.000138888888888
+    ],
+    "collection": "cop-dem-glo-30",
+    "assets": [
+      "data",
+      "tilejson",
+      "rendered_preview"
+    ]
+  }
+]

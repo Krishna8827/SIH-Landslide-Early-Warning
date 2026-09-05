@@ -1,0 +1,206 @@
+[
+  {
+    "id": "ESA_WorldCover_10m_2021_v200_N27E096",
+    "bbox": [
+      96.0,
+      27.0,
+      99.0,
+      30.0
+    ],
+    "datetime": null,
+    "product_version": "2.0.0",
+    "assets": [
+      "map",
+      "input_quality",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "ESA_WorldCover_10m_2021_v200_N27E093",
+    "bbox": [
+      93.0,
+      27.0,
+      96.0,
+      30.0
+    ],
+    "datetime": null,
+    "product_version": "2.0.0",
+    "assets": [
+      "map",
+      "input_quality",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "ESA_WorldCover_10m_2021_v200_N27E090",
+    "bbox": [
+      90.0,
+      27.0,
+      93.0,
+      30.0
+    ],
+    "datetime": null,
+    "product_version": "2.0.0",
+    "assets": [
+      "map",
+      "input_quality",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "ESA_WorldCover_10m_2021_v200_N27E087",
+    "bbox": [
+      87.0,
+      27.0,
+      90.0,
+      30.0
+    ],
+    "datetime": null,
+    "product_version": "2.0.0",
+    "assets": [
+      "map",
+      "input_quality",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "ESA_WorldCover_10m_2021_v200_N24E096",
+    "bbox": [
+      96.0,
+      24.0,
+      99.0,
+      27.0
+    ],
+    "datetime": null,
+    "product_version": "2.0.0",
+    "assets": [
+      "map",
+      "input_quality",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "ESA_WorldCover_10m_2021_v200_N24E093",
+    "bbox": [
+      93.0,
+      24.0,
+      96.0,
+      27.0
+    ],
+    "datetime": null,
+    "product_version": "2.0.0",
+    "assets": [
+      "map",
+      "input_quality",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "ESA_WorldCover_10m_2021_v200_N24E090",
+    "bbox": [
+      90.0,
+      24.0,
+      93.0,
+      27.0
+    ],
+    "datetime": null,
+    "product_version": "2.0.0",
+    "assets": [
+      "map",
+      "input_quality",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "ESA_WorldCover_10m_2021_v200_N24E087",
+    "bbox": [
+      87.0,
+      24.0,
+      90.0,
+      27.0
+    ],
+    "datetime": null,
+    "product_version": "2.0.0",
+    "assets": [
+      "map",
+      "input_quality",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "ESA_WorldCover_10m_2021_v200_N21E096",
+    "bbox": [
+      96.0,
+      21.0,
+      99.0,
+      24.0
+    ],
+    "datetime": null,
+    "product_version": "2.0.0",
+    "assets": [
+      "map",
+      "input_quality",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "ESA_WorldCover_10m_2021_v200_N21E093",
+    "bbox": [
+      93.0,
+      21.0,
+      96.0,
+      24.0
+    ],
+    "datetime": null,
+    "product_version": "2.0.0",
+    "assets": [
+      "map",
+      "input_quality",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "ESA_WorldCover_10m_2021_v200_N21E090",
+    "bbox": [
+      90.0,
+      21.0,
+      93.0,
+      24.0
+    ],
+    "datetime": null,
+    "product_version": "2.0.0",
+    "assets": [
+      "map",
+      "input_quality",
+      "tilejson",
+      "rendered_preview"
+    ]
+  },
+  {
+    "id": "ESA_WorldCover_10m_2021_v200_N21E087",
+    "bbox": [
+      87.0,
+      21.0,
+      90.0,
+      24.0
+    ],
+    "datetime": null,
+    "product_version": "2.0.0",
+    "assets": [
+      "map",
+      "input_quality",
+      "tilejson",
+      "rendered_preview"
+    ]
+  }
+]

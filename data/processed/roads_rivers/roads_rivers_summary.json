@@ -1,0 +1,15 @@
+{
+  "rows": 381,
+  "unique_coordinate_pairs": 348,
+  "road_extractions": 380,
+  "river_extractions": 380,
+  "both_features_extracted": 380,
+  "source": "OpenStreetMap via Overpass API",
+  "search_radii_m": [
+    5000,
+    15000,
+    30000
+  ],
+  "output_csv": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\roads_rivers\\ner_events_with_all_positive_features.csv",
+  "important_note": "Current OpenStreetMap infrastructure is used as a static susceptibility proxy, not as a guaranteed historical reconstruction."
+}

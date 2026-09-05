@@ -1,0 +1,9 @@
+{
+  "rows": 381,
+  "source": "ERA5-Land via Open-Meteo Historical Weather API",
+  "model": "era5_land",
+  "resolution_note": "ERA5-Land is approximately 0.1 degree (~11 km) reanalysis.",
+  "complete_soil_moisture_windows": 381,
+  "failed_or_incomplete_windows": 0,
+  "output_csv": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\soil_moisture\\ner_events_with_dem_rainfall_landcover_ndvi_soil_moisture.csv"
+}
