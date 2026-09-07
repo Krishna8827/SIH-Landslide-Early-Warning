@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#08111f">
+  <meta name="description" content="AI-powered landslide risk intelligence for India's North Eastern Region.">
+  <title>NER Landslide Intelligence</title>
+
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">NR</div>
+        <div>
+          <div class="brand-title">NER Landslide</div>
+          <div class="brand-subtitle">Intelligence Platform</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-view="overview"><span data-lucide="layout-dashboard"></span><span>Overview</span></button>
+        <button class="nav-item" data-view="map"><span data-lucide="map"></span><span>Live Risk Map</span></button>
+        <button class="nav-item" data-view="alerts"><span data-lucide="siren"></span><span>Alerts</span><span class="nav-count" id="navAlertCount">0</span></button>
+        <button class="nav-item" data-view="reports"><span data-lucide="camera"></span><span>Field Reports</span></button>
+        <button class="nav-item" data-view="roads"><span data-lucide="route"></span><span>Road Status</span></button>
+        <button class="nav-item" data-view="analytics"><span data-lucide="chart-no-axes-combined"></span><span>Analytics</span></button>
+        <button class="nav-item" data-view="system"><span data-lucide="activity"></span><span>System Status</span></button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="system-pill"><span class="pulse"></span><span>Prototype online</span></div>
+        <div class="tiny">Smart India Hackathon • Decision support</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-btn mobile-only" id="sidebarToggle" aria-label="Toggle navigation"><span data-lucide="menu"></span></button>
+          <div>
+            <div class="eyebrow">NORTH EASTERN REGION • INDIA</div>
+            <h1 id="pageTitle">Command Overview</h1>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="freshness" id="freshness">
+            <span data-lucide="database"></span>
+            <div><strong id="inferenceDate">—</strong><small>latest model snapshot</small></div>
+          </div>
+          <button class="secondary-btn" id="presentationBtn"><span data-lucide="presentation"></span><span>Presentation mode</span></button>
+          <button class="primary-btn" data-view-target="reports"><span data-lucide="plus"></span><span>Field report</span></button>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="global-banner">
+          <span data-lucide="shield-check"></span>
+          <span><strong>Prototype decision-support system.</strong> Risk values are AI-generated probabilities, not official government warnings. Ensemble validation: ~0.806 ROC-AUC under geographic cross-validation; ROC-AUC is not accuracy.</span>
+          <button class="text-btn" id="dismissBanner">Dismiss</button>
+        </div>
+
+        <section class="view active" id="view-overview">
+          <div class="hero-grid">
+            <div class="hero-card">
+              <div class="hero-noise"></div>
+              <div class="hero-copy">
+                <div class="status-chip"><span class="pulse"></span> NER-wide monitoring active</div>
+                <h2>See risk before it becomes disruption.</h2>
+                <p>AI-assisted regional intelligence combining terrain, rainfall, soil moisture, vegetation, road and river proximity across the North Eastern Region.</p>
+                <div class="hero-actions">
+                  <button class="primary-btn" data-view-target="map"><span data-lucide="radar"></span>Explore risk map</button>
+                  <button class="secondary-btn" data-view-target="analytics"><span data-lucide="chart-column-big"></span>Open analytics</button>
+                </div>
+              </div>
+              <div class="hero-metric">
+                <span class="metric-label">Highest observed prototype risk</span>
+                <strong id="heroMaxRisk">—</strong>
+                <span class="metric-foot" id="heroTopState">Across NER</span>
+              </div>
+            </div>
+
+            <div class="confidence-card">
+              <div class="card-kicker">MODEL VALIDATION</div>
+              <div class="confidence-value">0.806</div>
+              <div class="confidence-label">Geographic CV ROC-AUC</div>
+              <div class="confidence-bar"><span style="width:80.6%"></span></div>
+              <div class="confidence-note">Prototype validation on 762 samples. This is not accuracy and not operational field validation.</div>
+            </div>
+          </div>
+
+          <div class="stat-grid">
+            <article class="stat-card"><div class="stat-icon blue"><span data-lucide="scan-line"></span></div><div><span>Monitored zones</span><strong id="statMonitored">—</strong><small>NER prediction grid</small></div></article>
+            <article class="stat-card"><div class="stat-icon red"><span data-lucide="triangle-alert"></span></div><div><span>Critical zones</span><strong id="statCritical">—</strong><small>Risk ≥ 0.75</small></div></article>
+            <article class="stat-card"><div class="stat-icon orange"><span data-lucide="flame"></span></div><div><span>High-risk zones</span><strong id="statHigh">—</strong><small>0.50 ≤ risk &lt; 0.75</small></div></article>
+            <article class="stat-card"><div class="stat-icon violet"><span data-lucide="bell-ring"></span></div><div><span>Prototype alerts</span><strong id="statAlerts">—</strong><small>Risk ≥ 0.30</small></div></article>
+          </div>
+
+          <div class="dashboard-grid">
+            <article class="panel map-panel">
+              <div class="panel-head">
+                <div><span class="panel-kicker">GEOSPATIAL INTELLIGENCE</span><h3>Regional risk map</h3></div>
+                <button class="text-btn" data-view-target="map">Open full map <span data-lucide="arrow-up-right"></span></button>
+              </div>
+              <div id="overviewMap" class="map"></div>
+            </article>
+
+            <article class="panel">
+              <div class="panel-head">
+                <div><span class="panel-kicker">PRIORITY WATCHLIST</span><h3>Highest-risk locations</h3></div>
+                <span class="badge badge-soft-red">Live from snapshot</span>
+              </div>
+              <div class="watchlist" id="watchlist"></div>
+            </article>
+          </div>
+
+          <div class="dashboard-grid lower">
+            <article class="panel">
+              <div class="panel-head"><div><span class="panel-kicker">RISK DISTRIBUTION</span><h3>Severity mix</h3></div></div>
+              <div class="chart-wrap"><canvas id="riskDonut"></canvas></div>
+            </article>
+            <article class="panel">
+              <div class="panel-head"><div><span class="panel-kicker">STATE COMPARISON</span><h3>Mean risk by state</h3></div></div>
+              <div class="chart-wrap"><canvas id="stateBars"></canvas></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="view-map">
+          <div class="map-workspace">
+            <div class="map-toolbar">
+              <div class="filter-row">
+                <div class="search-box"><span data-lucide="search"></span><input id="mapSearch" placeholder="Search state or grid ID"></div>
+                <select id="stateFilter"><option value="">All states</option></select>
+                <select id="levelFilter"><option value="">All risk levels</option><option>LOW</option><option>MODERATE</option><option>HIGH</option><option>CRITICAL</option></select>
+                <label class="toggle"><input type="checkbox" id="alertsOnly"><span></span>Alerts only</label>
+                <button class="secondary-btn" id="applyMapFilters"><span data-lucide="sliders-horizontal"></span>Apply</button>
+              </div>
+              <div class="legend">
+                <span><i class="legend-dot low"></i>Low</span>
+                <span><i class="legend-dot moderate"></i>Moderate</span>
+                <span><i class="legend-dot high"></i>High</span>
+                <span><i class="legend-dot critical"></i>Critical</span>
+              </div>
+            </div>
+            <div id="fullMap" class="full-map"></div>
+            <aside class="detail-drawer" id="detailDrawer">
+              <button class="drawer-close" id="drawerClose"><span data-lucide="x"></span></button>
+              <div class="drawer-empty" id="drawerEmpty">
+                <span data-lucide="mouse-pointer-click"></span>
+                <h3>Select a grid point</h3>
+                <p>Click any map marker to inspect environmental features and model output.</p>
+              </div>
+              <div class="drawer-content hidden" id="drawerContent"></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="view-alerts">
+          <div class="section-header">
+            <div><span class="eyebrow">EARLY-WARNING WORKFLOW</span><h2>Prototype Alerts</h2><p>Operational-style alert queue generated from the 0.30 prototype threshold.</p></div>
+            <div class="segmented"><button class="active" data-alert-filter="">All</button><button data-alert-filter="ACTIVE">Active</button><button data-alert-filter="ACKNOWLEDGED">Acknowledged</button></div>
+          </div>
+          <div class="table-panel">
+            <div class="table-toolbar"><div class="search-box"><span data-lucide="search"></span><input id="alertSearch" placeholder="Search grid or state"></div><span class="table-count" id="alertCountLabel"></span></div>
+            <div class="table-scroll"><table class="data-table"><thead><tr><th>Grid ID</th><th>State</th><th>Probability</th><th>Severity</th><th>Status</th><th>Action</th></tr></thead><tbody id="alertsTable"></tbody></table></div>
+          </div>
+        </section>
+
+        <section class="view" id="view-reports">
+          <div class="section-header">
+            <div><span class="eyebrow">GROUND TRUTH CHANNEL</span><h2>Field Reporting</h2><p>Citizens and field officials can submit geo-tagged observations. Reports remain unverified until reviewed.</p></div>
+            <button class="primary-btn" id="locateMe"><span data-lucide="crosshair"></span>Use my location</button>
+          </div>
+          <div class="split-grid">
+            <form class="panel form-panel" id="reportForm">
+              <div class="panel-head"><div><span class="panel-kicker">NEW REPORT</span><h3>Submit observation</h3></div><span class="badge badge-soft-blue">Unverified</span></div>
+              <div class="form-grid">
+                <label>Latitude<input name="latitude" id="reportLat" type="number" step="any" required placeholder="26.1445"></label>
+                <label>Longitude<input name="longitude" id="reportLon" type="number" step="any" required placeholder="91.7362"></label>
+                <label>State<input name="state" placeholder="Assam"></label>
+                <label>District<input name="district" placeholder="District / region"></label>
+                <label class="span-2">Report type<select name="report_type"><option value="crack">Crack</option><option value="slope movement">Slope movement</option><option value="minor landslide">Minor landslide</option><option value="major landslide">Major landslide</option><option value="blocked road">Blocked road</option><option value="flooding">Flooding</option><option value="other">Other</option></select></label>
+                <label class="span-2">Description<textarea name="description" rows="5" placeholder="Describe what you can see, road impact, approximate size, or nearby landmarks..."></textarea></label>
+                <label class="span-2 upload-box"><input type="file" name="media" accept="image/*,video/mp4,video/webm"><span data-lucide="upload-cloud"></span><strong>Add photo or short video</strong><small>JPG, PNG, WEBP, MP4 or WEBM • max 20 MB</small></label>
+              </div>
+              <button class="primary-btn wide" type="submit"><span data-lucide="send"></span>Submit field report</button>
+            </form>
+
+            <article class="panel">
+              <div class="panel-head"><div><span class="panel-kicker">RECENT ACTIVITY</span><h3>Latest reports</h3></div><span class="table-count" id="reportCountLabel"></span></div>
+              <div class="activity-list" id="reportsList"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="view-roads">
+          <div class="section-header">
+            <div><span class="eyebrow">CONNECTIVITY INTELLIGENCE</span><h2>Road Status</h2><p>Track operational road conditions near vulnerable locations.</p></div>
+          </div>
+          <div class="split-grid">
+            <form class="panel form-panel" id="roadForm">
+              <div class="panel-head"><div><span class="panel-kicker">ROAD UPDATE</span><h3>Add connectivity status</h3></div></div>
+              <div class="form-grid">
+                <label class="span-2">Road / route name<input id="roadName" required placeholder="NH-10 / local road"></label>
+                <label>State<input id="roadState" placeholder="Sikkim"></label>
+                <label>Status<select id="roadStatus"><option>OPEN</option><option>CAUTION</option><option>BLOCKED</option><option selected>UNKNOWN</option></select></label>
+                <label>Latitude<input id="roadLat" type="number" step="any" placeholder="Optional"></label>
+                <label>Longitude<input id="roadLon" type="number" step="any" placeholder="Optional"></label>
+                <label class="span-2">Notes<textarea id="roadNotes" rows="4" placeholder="Reason, obstruction, alternate route, or update..."></textarea></label>
+              </div>
+              <button class="primary-btn wide" type="submit"><span data-lucide="route"></span>Save road status</button>
+            </form>
+            <article class="panel">
+              <div class="panel-head"><div><span class="panel-kicker">NETWORK STATUS</span><h3>Current road updates</h3></div></div>
+              <div class="activity-list" id="roadsList"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="view-analytics">
+          <div class="section-header"><div><span class="eyebrow">DECISION INTELLIGENCE</span><h2>Analytics</h2><p>State-level comparison and environmental context from the latest model snapshot.</p></div></div>
+          <div class="analytics-grid">
+            <article class="panel"><div class="panel-head"><div><span class="panel-kicker">STATE RISK</span><h3>Mean vs maximum probability</h3></div></div><div class="chart-wrap tall"><canvas id="stateRiskChart"></canvas></div></article>
+            <article class="panel"><div class="panel-head"><div><span class="panel-kicker">ALERT LOAD</span><h3>Alerts by state</h3></div></div><div class="chart-wrap tall"><canvas id="alertsChart"></canvas></div></article>
+            <article class="panel span-2"><div class="panel-head"><div><span class="panel-kicker">ENVIRONMENTAL CONTEXT</span><h3>24h rainfall vs mean model risk</h3></div></div><div class="chart-wrap tall"><canvas id="rainRiskChart"></canvas></div></article>
+          </div>
+        </section>
+
+        <section class="view" id="view-system">
+          <div class="section-header"><div><span class="eyebrow">PLATFORM HEALTH</span><h2>System Status</h2><p>Transparent status of model, cached environmental sources, and application services.</p></div></div>
+          <div class="system-grid" id="systemGrid"></div>
+          <article class="panel methodology">
+            <div class="panel-head"><div><span class="panel-kicker">SCIENTIFIC TRANSPARENCY</span><h3>How to present this system</h3></div></div>
+            <div class="method-grid">
+              <div><span class="method-num">01</span><h4>Risk, not certainty</h4><p>Outputs are AI-generated landslide risk probabilities, not declarations that a landslide will occur.</p></div>
+              <div><span class="method-num">02</span><h4>Geographic validation</h4><p>The final ensemble achieved approximately 0.806 ROC-AUC under 5-fold geographic cross-validation.</p></div>
+              <div><span class="method-num">03</span><h4>Prototype threshold</h4><p>0.30 is an OOF-selected prototype operating threshold, not an official disaster-warning threshold.</p></div>
+              <div><span class="method-num">04</span><h4>Operational validation next</h4><p>Deployment with live IMD/sensor feeds and field validation is required before real-world warning use.</p></div>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast-stack" id="toastStack"></div>
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
