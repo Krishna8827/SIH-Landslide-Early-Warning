@@ -1,0 +1,111 @@
+{
+  "dataset": {
+    "rows": 762,
+    "positive": 381,
+    "background": 381,
+    "features": 20,
+    "spatial_groups": 73,
+    "cv_folds": 5
+  },
+  "pooled_oof_metrics_at_0p5": {
+    "xgboost": {
+      "roc_auc": 0.797666039776524,
+      "pr_auc": 0.7921628154543606,
+      "f1": 0.7197802197802198,
+      "precision": 0.7550432276657061,
+      "recall": 0.6876640419947506
+    },
+    "lightgbm": {
+      "roc_auc": 0.7950275900551801,
+      "pr_auc": 0.7967244618460609,
+      "f1": 0.7020979020979021,
+      "precision": 0.7514970059880239,
+      "recall": 0.6587926509186351
+    },
+    "random_forest": {
+      "roc_auc": 0.8085918394059011,
+      "pr_auc": 0.8113407739245884,
+      "f1": 0.698140200286123,
+      "precision": 0.7672955974842768,
+      "recall": 0.6404199475065617
+    }
+  },
+  "ensemble_equal_weight_at_0p5": {
+    "roc_auc": 0.8059740563925573,
+    "pr_auc": 0.8049470300559682,
+    "f1": 0.7121001390820584,
+    "precision": 0.757396449704142,
+    "recall": 0.6719160104986877
+  },
+  "ensemble_oof_selected_f1_threshold": {
+    "threshold": 0.3,
+    "roc_auc": 0.8059740563925573,
+    "pr_auc": 0.8049470300559682,
+    "f1": 0.7544910179640718,
+    "precision": 0.6938325991189427,
+    "recall": 0.8267716535433071
+  },
+  "fold_metric_mean_std": {
+    "xgboost": {
+      "roc_auc_mean": 0.7989624340081404,
+      "roc_auc_std": 0.0148309763118998,
+      "pr_auc_mean": 0.7925839018925351,
+      "pr_auc_std": 0.029146862373155537,
+      "f1_mean": 0.7189929572411943,
+      "f1_std": 0.035339564728510214,
+      "precision_mean": 0.7571604955607876,
+      "precision_std": 0.032873963195938105,
+      "recall_mean": 0.6882901593427908,
+      "recall_std": 0.06534929552806765
+    },
+    "lightgbm": {
+      "roc_auc_mean": 0.7993996266641696,
+      "roc_auc_std": 0.016398360672924203,
+      "pr_auc_mean": 0.8032490054869041,
+      "pr_auc_std": 0.01351069005100194,
+      "f1_mean": 0.7013990364378275,
+      "f1_std": 0.03815991932814991,
+      "precision_mean": 0.7538975201044167,
+      "precision_std": 0.04378550193524951,
+      "recall_mean": 0.6590888248782986,
+      "recall_std": 0.06033508036420716
+    },
+    "random_forest": {
+      "roc_auc_mean": 0.8135515994948127,
+      "roc_auc_std": 0.012414996125184388,
+      "pr_auc_mean": 0.8222010337396292,
+      "pr_auc_std": 0.019962358965599857,
+      "f1_mean": 0.6973090989148678,
+      "f1_std": 0.033680799648239376,
+      "precision_mean": 0.767922310262855,
+      "precision_std": 0.01770306047375494,
+      "recall_mean": 0.640599419546788,
+      "recall_std": 0.0564149257985844
+    },
+    "ensemble_equal_weight": {
+      "roc_auc_mean": 0.8087728346454108,
+      "roc_auc_std": 0.01310205107140818,
+      "pr_auc_mean": 0.8105040100765656,
+      "pr_auc_std": 0.011365488769858061,
+      "f1_mean": 0.7108978914949065,
+      "f1_std": 0.0433839032515724,
+      "precision_mean": 0.7590533975828093,
+      "precision_std": 0.03426437860847599,
+      "recall_mean": 0.6724250382145118,
+      "recall_std": 0.07152073020762141
+    }
+  },
+  "artifacts": {
+    "fold_metrics_csv": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\training\\stage9_results\\geographic_cv_fold_metrics.csv",
+    "oof_predictions_csv": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\training\\stage9_results\\oof_predictions.csv",
+    "feature_importance_csv": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\training\\stage9_results\\feature_importance.csv",
+    "final_model_bundle": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\models\\v2\\v2_ensemble_bundle.joblib"
+  },
+  "important_caveats": [
+    "Background samples are matched pseudo-absences, not confirmed stable locations.",
+    "Geographic cross-validation reduces spatial leakage but is still prototype validation.",
+    "WorldCover 2021 and current OSM roads/waterways are static susceptibility proxies for historical events.",
+    "Historical event-day daily rainfall does not by itself establish a strict 6-24 hour operational lead time.",
+    "Do not describe ROC-AUC as accuracy."
+  ]
+}

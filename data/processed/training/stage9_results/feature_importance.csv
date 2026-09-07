@@ -1,0 +1,85 @@
+model,transformed_feature,importance_normalized
+lightgbm,distance_to_road_m,0.09461426491994178
+lightgbm,elevation_m,0.08665696263949539
+lightgbm,curvature_1_per_m,0.08238719068413392
+lightgbm,distance_to_river_m,0.0764677341096555
+lightgbm,slope_deg,0.07064531780688986
+lightgbm,aspect_sin,0.06889859291606017
+lightgbm,rainfall_7d_mm,0.06317321688500728
+lightgbm,aspect_cos,0.05909752547307132
+lightgbm,soil_moisture_surface_anomaly_vs_7d,0.05608927704997574
+lightgbm,rainfall_24h_mm,0.05414847161572053
+lightgbm,rainfall_72h_mm,0.04764677341096555
+lightgbm,soil_moisture_surface_7d_mean_m3_m3,0.04473556525958273
+lightgbm,soil_moisture_28_100cm_m3_m3,0.04065987384764677
+lightgbm,soil_moisture_surface_3d_mean_m3_m3,0.03444929645803008
+lightgbm,soil_moisture_7_28cm_m3_m3,0.03406113537117904
+lightgbm,soil_moisture_surface_m3_m3,0.029791363415817566
+lightgbm,ndvi_model_value,0.016302765647743814
+lightgbm,soil_moisture_0_100cm_m3_m3,0.015138282387190683
+lightgbm,land_cover_Built-up,0.012421154779233381
+lightgbm,land_cover_Tree cover,0.0059194565744784084
+lightgbm,land_cover_Cropland,0.0048520135856380394
+lightgbm,ndvi_missing,0.0012615235322658903
+lightgbm,land_cover_Grassland,0.0005822416302765648
+lightgbm,land_cover_Bare / sparse vegetation,0.0
+lightgbm,land_cover_Herbaceous wetland,0.0
+lightgbm,land_cover_Moss and lichen,0.0
+lightgbm,land_cover_Permanent water bodies,0.0
+lightgbm,land_cover_Snow and ice,0.0
+random_forest,distance_to_road_m,0.26703453943280836
+random_forest,elevation_m,0.07325019803748614
+random_forest,slope_deg,0.05597546709763628
+random_forest,distance_to_river_m,0.051233391091782064
+random_forest,land_cover_Built-up,0.04772385920292647
+random_forest,rainfall_7d_mm,0.047375494949471464
+random_forest,curvature_1_per_m,0.042202670950364486
+random_forest,rainfall_72h_mm,0.03878010969092183
+random_forest,aspect_sin,0.03768241278085117
+random_forest,rainfall_24h_mm,0.03654064813127443
+random_forest,aspect_cos,0.03492077611052507
+random_forest,soil_moisture_surface_anomaly_vs_7d,0.03350130435594671
+random_forest,soil_moisture_surface_7d_mean_m3_m3,0.03233157728365377
+random_forest,soil_moisture_7_28cm_m3_m3,0.03188735725714954
+random_forest,soil_moisture_surface_3d_mean_m3_m3,0.03178596364611994
+random_forest,soil_moisture_28_100cm_m3_m3,0.030280027101921743
+random_forest,soil_moisture_surface_m3_m3,0.028155370809308605
+random_forest,soil_moisture_0_100cm_m3_m3,0.027510460279717545
+random_forest,ndvi_model_value,0.022767054483556884
+random_forest,land_cover_Cropland,0.010625900800728597
+random_forest,land_cover_Tree cover,0.007285585932166536
+random_forest,ndvi_missing,0.004039925791864543
+random_forest,land_cover_Grassland,0.0039047276144232187
+random_forest,land_cover_Snow and ice,0.0019658831756055725
+random_forest,land_cover_Moss and lichen,0.0004834054841961895
+random_forest,land_cover_Permanent water bodies,0.0004746684469206234
+random_forest,land_cover_Bare / sparse vegetation,0.0002812200606721995
+random_forest,land_cover_Herbaceous wetland,0.0
+xgboost,distance_to_road_m,0.14110835054265355
+xgboost,land_cover_Cropland,0.1350717261627882
+xgboost,land_cover_Built-up,0.09947604052136884
+xgboost,land_cover_Tree cover,0.04488860865930403
+xgboost,distance_to_river_m,0.041815516074920255
+xgboost,elevation_m,0.04069938183612431
+xgboost,slope_deg,0.03977990194909165
+xgboost,ndvi_model_value,0.03914278416867686
+xgboost,rainfall_7d_mm,0.03778368276860956
+xgboost,soil_moisture_7_28cm_m3_m3,0.032303020719100024
+xgboost,curvature_1_per_m,0.03164475446542451
+xgboost,soil_moisture_0_100cm_m3_m3,0.03148694744132773
+xgboost,rainfall_72h_mm,0.03098489006219309
+xgboost,aspect_cos,0.03022794086740845
+xgboost,soil_moisture_surface_7d_mean_m3_m3,0.03020416792710313
+xgboost,soil_moisture_surface_3d_mean_m3_m3,0.029902574009104527
+xgboost,soil_moisture_28_100cm_m3_m3,0.02927125091781375
+xgboost,rainfall_24h_mm,0.02921763840188427
+xgboost,soil_moisture_surface_m3_m3,0.029206628306284118
+xgboost,aspect_sin,0.028388979230697966
+xgboost,soil_moisture_surface_anomaly_vs_7d,0.025667920995517682
+xgboost,ndvi_missing,0.021727293972603538
+xgboost,land_cover_Bare / sparse vegetation,0.0
+xgboost,land_cover_Grassland,0.0
+xgboost,land_cover_Herbaceous wetland,0.0
+xgboost,land_cover_Moss and lichen,0.0
+xgboost,land_cover_Permanent water bodies,0.0
+xgboost,land_cover_Snow and ice,0.0

@@ -1,0 +1,76 @@
+{
+  "inference_date": "2026-08-30",
+  "grid_resolution_deg": 0.2,
+  "grid_points": 593,
+  "risk_level_counts": {
+    "LOW": 383,
+    "MODERATE": 126,
+    "HIGH": 50,
+    "CRITICAL": 34
+  },
+  "prototype_alert_threshold": 0.3,
+  "prototype_alert_count": 180,
+  "state_summary": {
+    "Arunachal Pradesh": {
+      "grid_points": 192,
+      "mean_risk": 0.1939,
+      "max_risk": 0.9464,
+      "alerts": 38
+    },
+    "Assam": {
+      "grid_points": 174,
+      "mean_risk": 0.2385,
+      "max_risk": 0.8809,
+      "alerts": 50
+    },
+    "Manipur": {
+      "grid_points": 49,
+      "mean_risk": 0.3874,
+      "max_risk": 0.935,
+      "alerts": 29
+    },
+    "Meghalaya": {
+      "grid_points": 52,
+      "mean_risk": 0.2294,
+      "max_risk": 0.7615,
+      "alerts": 14
+    },
+    "Mizoram": {
+      "grid_points": 50,
+      "mean_risk": 0.413,
+      "max_risk": 0.9461,
+      "alerts": 30
+    },
+    "Nagaland": {
+      "grid_points": 36,
+      "mean_risk": 0.2531,
+      "max_risk": 0.9346,
+      "alerts": 8
+    },
+    "Sikkim": {
+      "grid_points": 17,
+      "mean_risk": 0.07,
+      "max_risk": 0.1557,
+      "alerts": 0
+    },
+    "Tripura": {
+      "grid_points": 23,
+      "mean_risk": 0.2989,
+      "max_risk": 0.5179,
+      "alerts": 11
+    }
+  },
+  "model_validation_reference": "Stage 9 geographic CV: ensemble ROC-AUC ~0.806; OOF-selected prototype threshold ~0.30 had recall ~0.827. These are prototype validation metrics, not operational field accuracy.",
+  "important_caveats": [
+    "Background training samples are matched pseudo-absences, not confirmed stable locations.",
+    "Risk bands are dashboard visualization bands, not government warning thresholds.",
+    "The alert threshold was selected from out-of-fold prototype predictions and is not independently field validated.",
+    "WorldCover 2021 and current OSM are static susceptibility proxies.",
+    "This pipeline uses a conservative data-complete inference date rather than claiming live real-time nowcasting.",
+    "NASA POWER rainfall and ERA5-Land soil moisture are gridded products and may not capture local convective or slope-scale conditions."
+  ],
+  "outputs": {
+    "csv": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\inference\\ner_risk_predictions_2026-08-30_0p2deg.csv",
+    "geojson": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\inference\\ner_risk_predictions_2026-08-30_0p2deg.geojson"
+  }
+}

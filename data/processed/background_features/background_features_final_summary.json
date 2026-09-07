@@ -1,0 +1,12 @@
+{
+  "rows": 381,
+  "terrain_ok": 381,
+  "rainfall_ok": 381,
+  "land_cover_ok": 381,
+  "ndvi_ok": 313,
+  "ndvi_model_usable": 131,
+  "soil_ok": 381,
+  "road_ok": 381,
+  "river_ok": 381,
+  "output_csv": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\background_features\\ner_background_points_with_all_features.csv"
+}

@@ -1,0 +1,19 @@
+|--- rainfall_7d_mm <= 218.34
+|   |--- rainfall_7d_mm <= 84.86
+|   |   |--- rainfall_7d_mm <= 60.03
+|   |   |   |--- class: 0
+|   |   |--- rainfall_7d_mm >  60.03
+|   |   |   |--- class: 0
+|   |--- rainfall_7d_mm >  84.86
+|   |   |--- rainfall_24h_mm <= 8.11
+|   |   |   |--- class: 1
+|   |   |--- rainfall_24h_mm >  8.11
+|   |   |   |--- class: 0
+|--- rainfall_7d_mm >  218.34
+|   |--- rainfall_72h_mm <= 245.75
+|   |   |--- rainfall_72h_mm <= 194.37
+|   |   |   |--- class: 1
+|   |   |--- rainfall_72h_mm >  194.37
+|   |   |   |--- class: 0
+|   |--- rainfall_72h_mm >  245.75
+|   |   |--- class: 1

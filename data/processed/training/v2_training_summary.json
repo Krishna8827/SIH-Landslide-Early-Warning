@@ -1,0 +1,14 @@
+{
+  "rows_total": 762,
+  "positive_rows": 381,
+  "background_rows": 381,
+  "model_features": 20,
+  "spatial_blocks_0p5deg": 73,
+  "positive_ndvi_available": 127,
+  "background_ndvi_available": 131,
+  "positive_road_available": 380,
+  "background_road_available": 381,
+  "positive_river_available": 380,
+  "background_river_available": 381,
+  "output_csv": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\training\\v2_training_matrix.csv"
+}

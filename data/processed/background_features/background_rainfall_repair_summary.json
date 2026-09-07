@@ -1,0 +1,9 @@
+{
+  "rows": 381,
+  "complete_before": 0,
+  "complete_after": 381,
+  "remaining_missing": 0,
+  "failures": [],
+  "updated_file": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\background_features\\background_non_osm_features.csv",
+  "backup_file": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\background_features\\background_non_osm_features_before_rainfall_repair.csv"
+}

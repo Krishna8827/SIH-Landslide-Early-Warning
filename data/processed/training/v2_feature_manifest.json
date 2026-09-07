@@ -1,0 +1,72 @@
+{
+  "target": "label",
+  "positive_class": 1,
+  "negative_class": 0,
+  "negative_class_note": "Background samples are matched pseudo-absences, not confirmed stable locations.",
+  "model_features": [
+    "elevation_m",
+    "slope_deg",
+    "aspect_sin",
+    "aspect_cos",
+    "curvature_1_per_m",
+    "rainfall_24h_mm",
+    "rainfall_72h_mm",
+    "rainfall_7d_mm",
+    "land_cover",
+    "ndvi_model_value",
+    "ndvi_missing",
+    "soil_moisture_surface_m3_m3",
+    "soil_moisture_7_28cm_m3_m3",
+    "soil_moisture_28_100cm_m3_m3",
+    "soil_moisture_0_100cm_m3_m3",
+    "soil_moisture_surface_3d_mean_m3_m3",
+    "soil_moisture_surface_7d_mean_m3_m3",
+    "soil_moisture_surface_anomaly_vs_7d",
+    "distance_to_road_m",
+    "distance_to_river_m"
+  ],
+  "numeric_features": [
+    "elevation_m",
+    "slope_deg",
+    "aspect_sin",
+    "aspect_cos",
+    "curvature_1_per_m",
+    "rainfall_24h_mm",
+    "rainfall_72h_mm",
+    "rainfall_7d_mm",
+    "ndvi_model_value",
+    "ndvi_missing",
+    "soil_moisture_surface_m3_m3",
+    "soil_moisture_7_28cm_m3_m3",
+    "soil_moisture_28_100cm_m3_m3",
+    "soil_moisture_0_100cm_m3_m3",
+    "soil_moisture_surface_3d_mean_m3_m3",
+    "soil_moisture_surface_7d_mean_m3_m3",
+    "soil_moisture_surface_anomaly_vs_7d",
+    "distance_to_road_m",
+    "distance_to_river_m"
+  ],
+  "categorical_features": [
+    "land_cover"
+  ],
+  "metadata_not_for_model": [
+    "sample_id",
+    "pair_id",
+    "label",
+    "sample_type",
+    "state",
+    "latitude",
+    "longitude",
+    "event_date",
+    "spatial_block_0p5deg"
+  ],
+  "validation_group": "spatial_block_0p5deg",
+  "notes": [
+    "Latitude, longitude, state, event date and IDs are metadata only and must not be model features.",
+    "Aspect is represented as sin/cos instead of raw degrees.",
+    "NDVI missingness is represented explicitly with ndvi_missing.",
+    "Road/river distances are current OSM susceptibility proxies, not event-date historical reconstructions.",
+    "WorldCover 2021 is a static land-cover proxy.",
+    "Historical daily rainfall/soil-moisture features are for prototype calibration and do not by themselves prove a fixed operational lead time."
+  ]
+}

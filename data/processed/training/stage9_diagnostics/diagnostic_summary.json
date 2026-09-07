@@ -1,0 +1,19 @@
+{
+  "perfect_stage9_scores_are_suspicious": true,
+  "numeric_features_with_univariate_separability_auc_ge_0p95": [],
+  "pair_spatial_audit": {
+    "pairs_total": 381,
+    "malformed_pairs_not_size_2": 0,
+    "pairs_same_0p5deg_block": 34,
+    "pairs_different_0p5deg_blocks": 347,
+    "pairs_same_spatial_cv_fold": 120,
+    "pairs_split_across_spatial_cv_folds": 261
+  },
+  "outputs": {
+    "univariate_numeric_separability": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\training\\stage9_diagnostics\\univariate_numeric_separability.csv",
+    "feature_summary_by_class": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\training\\stage9_diagnostics\\feature_summary_by_class.csv",
+    "ablation_grouped_cv": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\training\\stage9_diagnostics\\ablation_grouped_cv.csv",
+    "pair_spatial_audit": "C:\\Users\\kg968\\Downloads\\sih-landslide-ai-github-ready\\sih-landslide-ai\\data\\processed\\training\\stage9_diagnostics\\pair_spatial_audit.json"
+  },
+  "interpretation_note": "A perfect score across XGBoost, LightGBM and Random Forest in every geographic fold is a data/evaluation red flag. Do not present the 1.0 metrics as operational performance until the source of the separability is understood."
+}

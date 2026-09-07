@@ -22,3 +22,7 @@ data/raw/rainfall/nasa_power/cache/
 data/raw/osm/overpass_cache/
 data/processed/background_features/background_osm_checkpoint.csv
 data/processed/background_features/background_non_osm_checkpoint.csv
+data/raw/stage10_cache/
+data/raw/rainfall/nasa_power/background_cache/
+data/processed/background_features/background_non_osm_features_before_rainfall_repair.csv
+data/processed/inference/stage10_working_*.csv

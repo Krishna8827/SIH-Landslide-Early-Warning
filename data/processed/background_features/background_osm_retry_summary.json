@@ -1,0 +1,9 @@
+{
+  "rows": 381,
+  "road_before": 324,
+  "river_before": 324,
+  "road_after": 381,
+  "river_after": 381,
+  "both_after": 381,
+  "remaining_missing": 0
+}

@@ -1,0 +1,8 @@
+{
+  "pairs_total": 381,
+  "malformed_pairs_not_size_2": 0,
+  "pairs_same_0p5deg_block": 34,
+  "pairs_different_0p5deg_blocks": 347,
+  "pairs_same_spatial_cv_fold": 120,
+  "pairs_split_across_spatial_cv_folds": 261
+}

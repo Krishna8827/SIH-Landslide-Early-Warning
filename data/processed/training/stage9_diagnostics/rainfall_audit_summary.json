@@ -1,0 +1,231 @@
+{
+  "rows": 762,
+  "matched_pairs": 381,
+  "malformed_pairs": 0,
+  "class_summary": {
+    "rainfall_24h_mm": {
+      "positive": {
+        "count": 381,
+        "min": 0.0,
+        "q10": 1.12,
+        "q25": 5.24,
+        "median": 11.42,
+        "q75": 25.86,
+        "q90": 52.65,
+        "max": 160.51,
+        "mean": 21.34524934383202
+      },
+      "background": {
+        "count": 381,
+        "min": 0.0,
+        "q10": 1.38,
+        "q25": 4.58,
+        "median": 10.6,
+        "q75": 22.09,
+        "q90": 42.12,
+        "max": 153.08,
+        "mean": 17.239632545931755
+      }
+    },
+    "rainfall_72h_mm": {
+      "positive": {
+        "count": 381,
+        "min": 0.0,
+        "q10": 9.46,
+        "q25": 20.040000000000003,
+        "median": 43.940000000000005,
+        "q75": 88.53,
+        "q90": 146.8,
+        "max": 257.87,
+        "mean": 65.16635170603674
+      },
+      "background": {
+        "count": 381,
+        "min": 0.06,
+        "q10": 7.74,
+        "q25": 17.23,
+        "median": 40.01,
+        "q75": 75.4,
+        "q90": 110.35,
+        "max": 243.17,
+        "mean": 51.96259842519685
+      }
+    },
+    "rainfall_7d_mm": {
+      "positive": {
+        "count": 381,
+        "min": 0.01,
+        "q10": 31.2,
+        "q25": 53.8,
+        "median": 102.98,
+        "q75": 163.19,
+        "q90": 256.25,
+        "max": 428.0,
+        "mean": 119.65769028871391
+      },
+      "background": {
+        "count": 381,
+        "min": 0.1,
+        "q10": 24.06,
+        "q25": 47.44,
+        "median": 84.83,
+        "q75": 128.68,
+        "q90": 184.82,
+        "max": 342.94,
+        "mean": 97.22288713910761
+      }
+    },
+    "rain_prev_48h_mm": {
+      "positive": {
+        "count": 381,
+        "min": 0.0,
+        "q10": 4.21,
+        "q25": 11.689999999999998,
+        "median": 31.01,
+        "q75": 67.85000000000001,
+        "q90": 96.37,
+        "max": 238.58,
+        "mean": 43.82110236220471
+      },
+      "background": {
+        "count": 381,
+        "min": 0.019999999999999997,
+        "q10": 3.2199999999999998,
+        "q25": 8.73,
+        "median": 26.029999999999998,
+        "q75": 50.739999999999995,
+        "q90": 86.75,
+        "max": 181.54000000000002,
+        "mean": 34.7229658792651
+      }
+    },
+    "rain_prev_4d_mm": {
+      "positive": {
+        "count": 381,
+        "min": 0.0,
+        "q10": 13.11,
+        "q25": 21.17,
+        "median": 43.219999999999914,
+        "q75": 75.21,
+        "q90": 104.50999999999999,
+        "max": 253.83999999999997,
+        "mean": 54.491338582677166
+      },
+      "background": {
+        "count": 381,
+        "min": 0.0,
+        "q10": 8.759999999999998,
+        "q25": 18.710000000000008,
+        "median": 34.23,
+        "q75": 61.179999999999986,
+        "q90": 93.33000000000004,
+        "max": 226.49,
+        "mean": 45.26028871391077
+      }
+    },
+    "ratio_24_to_72": {
+      "positive": {
+        "count": 380,
+        "min": 0.0,
+        "q10": 0.061075971745989686,
+        "q25": 0.16485161978990334,
+        "median": 0.310702669213692,
+        "q75": 0.46731646570811547,
+        "q90": 0.6490727532097004,
+        "max": 0.9833980925468033,
+        "mean": 0.3293960554507548
+      },
+      "background": {
+        "count": 381,
+        "min": 0.0,
+        "q10": 0.07097457627118645,
+        "q25": 0.17512897094759705,
+        "median": 0.31829814459372996,
+        "q75": 0.48555206326675454,
+        "q90": 0.6381260096930533,
+        "max": 0.9917784508870618,
+        "mean": 0.3443623645097919
+      }
+    },
+    "ratio_72_to_7d": {
+      "positive": {
+        "count": 381,
+        "min": 0.0,
+        "q10": 0.1975745325922183,
+        "q25": 0.32795290543106725,
+        "median": 0.4961958698014987,
+        "q75": 0.674173337974243,
+        "q90": 0.8366002306045132,
+        "max": 1.0,
+        "mean": 0.5088369015970733
+      },
+      "background": {
+        "count": 381,
+        "min": 0.006535947712418302,
+        "q10": 0.18228229970412488,
+        "q25": 0.32153392330383485,
+        "median": 0.4880450070323489,
+        "q75": 0.6908591167403335,
+        "q90": 0.8503506203282731,
+        "max": 1.0,
+        "mean": 0.5068645275702317
+      }
+    }
+  },
+  "pair_comparison": {
+    "rainfall_24h_mm": {
+      "valid_pairs": 381,
+      "positive_gt_background_fraction": 0.5485564304461942,
+      "positive_lt_background_fraction": 0.4356955380577428,
+      "equal_fraction": 0.015748031496062992,
+      "median_pair_delta": 0.29000000000000004
+    },
+    "rainfall_72h_mm": {
+      "valid_pairs": 381,
+      "positive_gt_background_fraction": 0.6194225721784777,
+      "positive_lt_background_fraction": 0.3805774278215223,
+      "equal_fraction": 0.0,
+      "median_pair_delta": 2.9300000000000015
+    },
+    "rainfall_7d_mm": {
+      "valid_pairs": 381,
+      "positive_gt_background_fraction": 0.6614173228346457,
+      "positive_lt_background_fraction": 0.33858267716535434,
+      "equal_fraction": 0.0,
+      "median_pair_delta": 8.530000000000001
+    },
+    "rain_prev_48h_mm": {
+      "valid_pairs": 381,
+      "positive_gt_background_fraction": 0.6430446194225722,
+      "positive_lt_background_fraction": 0.3569553805774278,
+      "equal_fraction": 0.0,
+      "median_pair_delta": 2.1899999999999995
+    },
+    "rain_prev_4d_mm": {
+      "valid_pairs": 381,
+      "positive_gt_background_fraction": 0.6351706036745407,
+      "positive_lt_background_fraction": 0.36220472440944884,
+      "equal_fraction": 0.0026246719160104987,
+      "median_pair_delta": 2.759999999999998
+    },
+    "ratio_24_to_72": {
+      "valid_pairs": 380,
+      "positive_gt_background_fraction": 0.4368421052631579,
+      "positive_lt_background_fraction": 0.5578947368421052,
+      "equal_fraction": 0.005263157894736842,
+      "median_pair_delta": -0.015277666398872486
+    },
+    "ratio_72_to_7d": {
+      "valid_pairs": 381,
+      "positive_gt_background_fraction": 0.5065616797900262,
+      "positive_lt_background_fraction": 0.49081364829396323,
+      "equal_fraction": 0.0026246719160104987,
+      "median_pair_delta": 0.0003323366066084743
+    }
+  },
+  "rows_violating_rainfall_accumulation_monotonicity": 0,
+  "pair_grouped_depth3_tree_roc_auc": 0.5634054601442537,
+  "unique_rounded_rainfall_triplets": 641,
+  "rounded_triplets_shared_by_both_classes": 0,
+  "interpretation": "If matched pairs share date/state but rainfall-only models remain near-perfect, the pseudo-absence sampling is likely too easy or the positive/background rainfall extraction pipelines are not equivalent. Inspect the class summaries, pair deltas and shallow tree rules before using rainfall in the final model."
+}
