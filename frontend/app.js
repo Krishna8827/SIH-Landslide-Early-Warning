@@ -320,9 +320,10 @@ window.advanceReport=advanceReport;
 function initForms(){
   $('#reportForm').addEventListener('submit',async e=>{
     e.preventDefault();
+    const form=e.currentTarget;
     try{
-      await api('/api/reports',{method:'POST',body:new FormData(e.currentTarget)});
-      e.currentTarget.reset();
+      await api('/api/reports',{method:'POST',body:new FormData(form)});
+      form.reset();
       state.reports=await api('/api/reports');
       renderReports();
       toast('Field report submitted','Saved as NEW / unverified.');
@@ -339,6 +340,7 @@ function initForms(){
 
   $('#roadForm').addEventListener('submit',async e=>{
     e.preventDefault();
+    const form=e.currentTarget;
     const payload={
       road_name:$('#roadName').value,
       state:$('#roadState').value,
@@ -349,7 +351,7 @@ function initForms(){
     };
     try{
       await api('/api/roads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-      e.currentTarget.reset();
+      form.reset();
       state.roads=await api('/api/roads');
       renderRoads();
       toast('Road status saved',`${payload.road_name} added to the connectivity feed.`);
