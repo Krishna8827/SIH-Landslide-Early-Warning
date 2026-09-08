@@ -75,13 +75,9 @@ function setView(name){
   window.scrollTo({top:0,behavior:'smooth'});
 
   if(name==='map'){
-    // Leaflet cannot reliably calculate dimensions while its parent view is display:none.
     // Create the large map only after this view becomes visible.
-    ensureFullMap();
-    if(Array.isArray(state.risk) && state.risk.length){
-      renderFullRiskMarkers(state.risk);
-    }
-    scheduleMapResize(state.maps.full);
+    const fullMap=ensureFullMap();
+    scheduleMapResize(fullMap);
   }
 
   if(name==='overview'){
@@ -112,13 +108,13 @@ function tileLayer(){
 }
 function scheduleMapResize(map){
   if(!map) return;
-  [0,80,220,500].forEach(ms=>{
-    setTimeout(()=>{
-      try{ map.invalidateSize({pan:false,animate:false}); }catch(_){}
-    },ms);
+  requestAnimationFrame(()=>{
+    try{ map.invalidateSize({pan:false,animate:false}); }catch(_){}
   });
+  setTimeout(()=>{
+    try{ map.invalidateSize({pan:false,animate:false}); }catch(_){}
+  },180);
 }
-
 function ensureFullMap(){
   if(!window.L) return null;
 
@@ -130,42 +126,31 @@ function ensureFullMap(){
   const container=$('#fullMap');
   if(!container) return null;
 
+  // preferCanvas makes Leaflet use one internal canvas renderer for vector layers.
+  // Do not create per-marker renderers or ResizeObservers here.
   state.maps.full=L.map('fullMap',{
     zoomControl:false,
     minZoom:5,
     maxZoom:18,
     preferCanvas:true
-  });
+  }).setView([26.2,92.8],6);
+
   tileLayer().addTo(state.maps.full);
   L.control.zoom({position:'bottomright'}).addTo(state.maps.full);
+
   state.layers.full=L.layerGroup().addTo(state.maps.full);
   state.layers.reports=L.layerGroup().addTo(state.maps.full);
   state.layers.roads=L.layerGroup().addTo(state.maps.full);
 
-  // North Eastern Region viewport. This prevents the map from opening
-  // at a world/Asia-scale zoom after a hidden-container resize.
-  const nerBounds=L.latLngBounds(
-    [21.4,87.3],
-    [30.1,98.2]
-  );
-  state.maps.full.fitBounds(nerBounds,{padding:[18,18],maxZoom:7});
-
-  // Re-render already-loaded model points now that the hidden map has become visible.
-  if(Array.isArray(state.risk) && state.risk.length){
-    renderFullRiskMarkers(state.risk);
-  }
-
-  // Automatically repair map dimensions when the workspace changes size.
-  if('ResizeObserver' in window){
-    const observer=new ResizeObserver(()=>scheduleMapResize(state.maps.full));
-    observer.observe(container);
-    state.maps.full._resizeObserver=observer;
-  }
-
   scheduleMapResize(state.maps.full);
+
+  if(Array.isArray(state.risk) && state.risk.length){
+    // Render once after the map container is visible.
+    setTimeout(()=>renderFullRiskMarkers(state.risk),220);
+  }
+
   return state.maps.full;
 }
-
 function initMaps(){
   if(!window.L){
     $('#overviewMap').innerHTML='<div style="padding:30px;color:#7890a9">Interactive map library unavailable. Tables and APIs still work.</div>';
@@ -178,13 +163,6 @@ function initMaps(){
   tileLayer().addTo(state.maps.overview);
   L.control.zoom({position:'bottomright'}).addTo(state.maps.overview);
   state.layers.overview=L.layerGroup().addTo(state.maps.overview);
-
-  const overviewContainer=$('#overviewMap');
-  if('ResizeObserver' in window && overviewContainer){
-    const observer=new ResizeObserver(()=>scheduleMapResize(state.maps.overview));
-    observer.observe(overviewContainer);
-    state.maps.overview._resizeObserver=observer;
-  }
 
   // The full map is intentionally initialized lazily when Live Risk Map opens.
   state.maps.full=null;
@@ -210,29 +188,25 @@ function renderFullRiskMarkers(rows){
 
   state.layers.full.clearLayers();
 
-  const bounds=[];
   let markerCount=0;
 
-  // IMPORTANT: use ONE shared Canvas renderer for every risk point.
-  // Creating one Canvas renderer per marker can exhaust browser memory.
-  if(!state.maps.full._riskCanvasRenderer){
-    state.maps.full._riskCanvasRenderer=L.canvas({padding:0.35});
-  }
-  const riskRenderer=state.maps.full._riskCanvasRenderer;
-
   rows.forEach(r=>{
-    const lat=Number(r.latitude),lon=Number(r.longitude);
-    if(!Number.isFinite(lat)||!Number.isFinite(lon)) return;
+    const lat=Number(r.latitude);
+    const lon=Number(r.longitude);
+    if(!Number.isFinite(lat) || !Number.isFinite(lon)) return;
 
-    L.circleMarker(
-      [lat,lon],
-      {...markerStyle(r,false),renderer:riskRenderer}
-    )
-      .on('click',()=>showDetail(r))
-      .bindTooltip(`${esc(r.state)} • ${fmt(r.risk_probability)}`,{direction:'top'})
-      .addTo(state.layers.full);
+    // Leaflet will use the map-level preferCanvas renderer.
+    const marker=L.circleMarker([lat,lon],markerStyle(r,false));
 
-    bounds.push([lat,lon]);
+    marker.on('click',()=>showDetail(r));
+
+    // Bind a lightweight tooltip, but do not open/create anything eagerly.
+    marker.bindTooltip(
+      `${esc(r.state)} • ${fmt(r.risk_probability)}`,
+      {direction:'top',sticky:true}
+    );
+
+    marker.addTo(state.layers.full);
     markerCount++;
   });
 
@@ -241,22 +215,10 @@ function renderFullRiskMarkers(rows){
     search.placeholder=`Search ${markerCount} risk points by state or grid ID`;
   }
 
+  // Fixed regional camera is safer than repeated fitBounds during resize.
+  state.maps.full.setView([26.2,92.8],6,{animate:false});
   scheduleMapResize(state.maps.full);
-
-  if(bounds.length){
-    setTimeout(()=>{
-      try{
-        state.maps.full.fitBounds(bounds,{
-          paddingTopLeft:[18,18],
-          paddingBottomRight:[350,18],
-          maxZoom:7,
-          animate:false
-        });
-      }catch(_){}
-    },120);
-  }
 }
-
 function renderRiskMarkers(rows){
   if(!window.L) return;
 
@@ -532,8 +494,17 @@ async function boot(){
 
     if(window.lucide) lucide.createIcons();
 
+    // Stability-first deployment: remove previous service workers/caches.
+    // Offline shell can be re-enabled later after the map is fully validated.
     if('serviceWorker' in navigator){
-      navigator.serviceWorker.register('/sw.js').catch(()=>{});
+      navigator.serviceWorker.getRegistrations()
+        .then(regs=>Promise.all(regs.map(reg=>reg.unregister())))
+        .catch(()=>{});
+    }
+    if(window.caches){
+      caches.keys()
+        .then(keys=>Promise.all(keys.map(key=>caches.delete(key))))
+        .catch(()=>{});
     }
   }catch(err){
     console.error(err);
