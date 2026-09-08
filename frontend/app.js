@@ -78,6 +78,9 @@ function setView(name){
     // Leaflet cannot reliably calculate dimensions while its parent view is display:none.
     // Create the large map only after this view becomes visible.
     ensureFullMap();
+    if(Array.isArray(state.risk) && state.risk.length){
+      renderFullRiskMarkers(state.risk);
+    }
     scheduleMapResize(state.maps.full);
   }
 
@@ -127,12 +130,25 @@ function ensureFullMap(){
   const container=$('#fullMap');
   if(!container) return null;
 
-  state.maps.full=L.map('fullMap',{zoomControl:false}).setView([26.25,92.7],6);
+  state.maps.full=L.map('fullMap',{
+    zoomControl:false,
+    minZoom:5,
+    maxZoom:18,
+    preferCanvas:true
+  });
   tileLayer().addTo(state.maps.full);
   L.control.zoom({position:'bottomright'}).addTo(state.maps.full);
   state.layers.full=L.layerGroup().addTo(state.maps.full);
   state.layers.reports=L.layerGroup().addTo(state.maps.full);
   state.layers.roads=L.layerGroup().addTo(state.maps.full);
+
+  // North Eastern Region viewport. This prevents the map from opening
+  // at a world/Asia-scale zoom after a hidden-container resize.
+  const nerBounds=L.latLngBounds(
+    [21.4,87.3],
+    [30.1,98.2]
+  );
+  state.maps.full.fitBounds(nerBounds,{padding:[18,18],maxZoom:7});
 
   // Re-render already-loaded model points now that the hidden map has become visible.
   if(Array.isArray(state.risk) && state.risk.length){
@@ -190,21 +206,51 @@ function markerStyle(r, compact=false){
   };
 }
 function renderFullRiskMarkers(rows){
-  if(!window.L || !state.layers.full) return;
+  if(!window.L || !state.layers.full || !state.maps.full) return;
 
   state.layers.full.clearLayers();
+
+  const bounds=[];
+  let markerCount=0;
 
   rows.forEach(r=>{
     const lat=Number(r.latitude),lon=Number(r.longitude);
     if(!Number.isFinite(lat)||!Number.isFinite(lon)) return;
 
-    L.circleMarker([lat,lon],markerStyle(r,false))
+    const marker=L.circleMarker(
+      [lat,lon],
+      {...markerStyle(r,false),renderer:L.canvas({padding:0.5})}
+    )
       .on('click',()=>showDetail(r))
       .bindTooltip(`${esc(r.state)} • ${fmt(r.risk_probability)}`,{direction:'top'})
       .addTo(state.layers.full);
+
+    bounds.push([lat,lon]);
+    markerCount++;
   });
 
+  // Surface the loaded marker count in the search placeholder so it is obvious
+  // that model points are present even before the user clicks one.
+  const search=$('#mapSearch');
+  if(search){
+    search.placeholder=`Search ${markerCount} risk points by state or grid ID`;
+  }
+
   scheduleMapResize(state.maps.full);
+
+  // Keep the camera tightly focused on NER whenever points are available.
+  if(bounds.length){
+    setTimeout(()=>{
+      try{
+        state.maps.full.fitBounds(bounds,{
+          paddingTopLeft:[18,18],
+          paddingBottomRight:[350,18],
+          maxZoom:7,
+          animate:false
+        });
+      }catch(_){}
+    },120);
+  }
 }
 
 function renderRiskMarkers(rows){

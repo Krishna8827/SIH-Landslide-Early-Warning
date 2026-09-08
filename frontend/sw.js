@@ -1,4 +1,4 @@
-const CACHE='ner-landslide-shell-v4';
+const CACHE='ner-landslide-shell-v5';
 const SHELL=['/','/static/styles.css','/static/app.js','/manifest.webmanifest'];
 
 self.addEventListener('install',event=>{
