@@ -213,13 +213,20 @@ function renderFullRiskMarkers(rows){
   const bounds=[];
   let markerCount=0;
 
+  // IMPORTANT: use ONE shared Canvas renderer for every risk point.
+  // Creating one Canvas renderer per marker can exhaust browser memory.
+  if(!state.maps.full._riskCanvasRenderer){
+    state.maps.full._riskCanvasRenderer=L.canvas({padding:0.35});
+  }
+  const riskRenderer=state.maps.full._riskCanvasRenderer;
+
   rows.forEach(r=>{
     const lat=Number(r.latitude),lon=Number(r.longitude);
     if(!Number.isFinite(lat)||!Number.isFinite(lon)) return;
 
-    const marker=L.circleMarker(
+    L.circleMarker(
       [lat,lon],
-      {...markerStyle(r,false),renderer:L.canvas({padding:0.5})}
+      {...markerStyle(r,false),renderer:riskRenderer}
     )
       .on('click',()=>showDetail(r))
       .bindTooltip(`${esc(r.state)} • ${fmt(r.risk_probability)}`,{direction:'top'})
@@ -229,8 +236,6 @@ function renderFullRiskMarkers(rows){
     markerCount++;
   });
 
-  // Surface the loaded marker count in the search placeholder so it is obvious
-  // that model points are present even before the user clicks one.
   const search=$('#mapSearch');
   if(search){
     search.placeholder=`Search ${markerCount} risk points by state or grid ID`;
@@ -238,7 +243,6 @@ function renderFullRiskMarkers(rows){
 
   scheduleMapResize(state.maps.full);
 
-  // Keep the camera tightly focused on NER whenever points are available.
   if(bounds.length){
     setTimeout(()=>{
       try{
