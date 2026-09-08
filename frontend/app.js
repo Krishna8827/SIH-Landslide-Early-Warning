@@ -73,8 +73,18 @@ function setView(name){
   $('#pageTitle').textContent=titles[name]||'NER Landslide Intelligence';
   $('#sidebar').classList.remove('open');
   window.scrollTo({top:0,behavior:'smooth'});
-  if(name==='map' && state.maps.full) setTimeout(()=>state.maps.full.invalidateSize(),120);
-  if(name==='overview' && state.maps.overview) setTimeout(()=>state.maps.overview.invalidateSize(),120);
+
+  if(name==='map'){
+    // Leaflet cannot reliably calculate dimensions while its parent view is display:none.
+    // Create the large map only after this view becomes visible.
+    ensureFullMap();
+    scheduleMapResize(state.maps.full);
+  }
+
+  if(name==='overview'){
+    scheduleMapResize(state.maps.overview);
+  }
+
   if(window.lucide) lucide.createIcons();
 }
 function initNavigation(){
@@ -97,16 +107,25 @@ function tileLayer(){
     attribution:'© OpenStreetMap contributors'
   });
 }
-function initMaps(){
-  if(!window.L){
-    $('#overviewMap').innerHTML='<div style="padding:30px;color:#7890a9">Interactive map library unavailable. Tables and APIs still work.</div>';
-    $('#fullMap').innerHTML='<div style="padding:30px;color:#7890a9">Interactive map library unavailable. Tables and APIs still work.</div>';
-    return;
+function scheduleMapResize(map){
+  if(!map) return;
+  [0,80,220,500].forEach(ms=>{
+    setTimeout(()=>{
+      try{ map.invalidateSize({pan:false,animate:false}); }catch(_){}
+    },ms);
+  });
+}
+
+function ensureFullMap(){
+  if(!window.L) return null;
+
+  if(state.maps.full){
+    scheduleMapResize(state.maps.full);
+    return state.maps.full;
   }
-  state.maps.overview=L.map('overviewMap',{zoomControl:false,attributionControl:false}).setView([26.25,92.7],6);
-  tileLayer().addTo(state.maps.overview);
-  L.control.zoom({position:'bottomright'}).addTo(state.maps.overview);
-  state.layers.overview=L.layerGroup().addTo(state.maps.overview);
+
+  const container=$('#fullMap');
+  if(!container) return null;
 
   state.maps.full=L.map('fullMap',{zoomControl:false}).setView([26.25,92.7],6);
   tileLayer().addTo(state.maps.full);
@@ -114,6 +133,48 @@ function initMaps(){
   state.layers.full=L.layerGroup().addTo(state.maps.full);
   state.layers.reports=L.layerGroup().addTo(state.maps.full);
   state.layers.roads=L.layerGroup().addTo(state.maps.full);
+
+  // Re-render already-loaded model points now that the hidden map has become visible.
+  if(Array.isArray(state.risk) && state.risk.length){
+    renderFullRiskMarkers(state.risk);
+  }
+
+  // Automatically repair map dimensions when the workspace changes size.
+  if('ResizeObserver' in window){
+    const observer=new ResizeObserver(()=>scheduleMapResize(state.maps.full));
+    observer.observe(container);
+    state.maps.full._resizeObserver=observer;
+  }
+
+  scheduleMapResize(state.maps.full);
+  return state.maps.full;
+}
+
+function initMaps(){
+  if(!window.L){
+    $('#overviewMap').innerHTML='<div style="padding:30px;color:#7890a9">Interactive map library unavailable. Tables and APIs still work.</div>';
+    $('#fullMap').innerHTML='<div style="padding:30px;color:#7890a9">Interactive map library unavailable. Tables and APIs still work.</div>';
+    return;
+  }
+
+  // Overview is visible on initial page load, so it is safe to initialize immediately.
+  state.maps.overview=L.map('overviewMap',{zoomControl:false,attributionControl:false}).setView([26.25,92.7],6);
+  tileLayer().addTo(state.maps.overview);
+  L.control.zoom({position:'bottomright'}).addTo(state.maps.overview);
+  state.layers.overview=L.layerGroup().addTo(state.maps.overview);
+
+  const overviewContainer=$('#overviewMap');
+  if('ResizeObserver' in window && overviewContainer){
+    const observer=new ResizeObserver(()=>scheduleMapResize(state.maps.overview));
+    observer.observe(overviewContainer);
+    state.maps.overview._resizeObserver=observer;
+  }
+
+  // The full map is intentionally initialized lazily when Live Risk Map opens.
+  state.maps.full=null;
+  state.layers.full=null;
+  state.layers.reports=null;
+  state.layers.roads=null;
 }
 
 function markerStyle(r, compact=false){
@@ -128,10 +189,10 @@ function markerStyle(r, compact=false){
     opacity:.95
   };
 }
-function renderRiskMarkers(rows){
-  if(!window.L) return;
+function renderFullRiskMarkers(rows){
+  if(!window.L || !state.layers.full) return;
+
   state.layers.full.clearLayers();
-  state.layers.overview.clearLayers();
 
   rows.forEach(r=>{
     const lat=Number(r.latitude),lon=Number(r.longitude);
@@ -141,11 +202,37 @@ function renderRiskMarkers(rows){
       .on('click',()=>showDetail(r))
       .bindTooltip(`${esc(r.state)} • ${fmt(r.risk_probability)}`,{direction:'top'})
       .addTo(state.layers.full);
-
-    L.circleMarker([lat,lon],markerStyle(r,true))
-      .on('click',()=>{setView('map');setTimeout(()=>{state.maps.full.setView([lat,lon],10);showDetail(r)},160)})
-      .addTo(state.layers.overview);
   });
+
+  scheduleMapResize(state.maps.full);
+}
+
+function renderRiskMarkers(rows){
+  if(!window.L) return;
+
+  if(state.layers.overview){
+    state.layers.overview.clearLayers();
+
+    rows.forEach(r=>{
+      const lat=Number(r.latitude),lon=Number(r.longitude);
+      if(!Number.isFinite(lat)||!Number.isFinite(lon)) return;
+
+      L.circleMarker([lat,lon],markerStyle(r,true))
+        .on('click',()=>{
+          setView('map');
+          setTimeout(()=>{
+            ensureFullMap();
+            state.maps.full?.setView([lat,lon],10);
+            showDetail(r);
+          },220);
+        })
+        .addTo(state.layers.overview);
+    });
+  }
+
+  if(state.layers.full){
+    renderFullRiskMarkers(rows);
+  }
 }
 
 function showDetail(r){
